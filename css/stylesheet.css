@@ -1,0 +1,641 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #454b92, #af99c9);
+}
+
+/* FONTS */
+@font-face {font-family: "Satoshi-Regular";
+    src: url(fonts/Satoshi-Regular.otf);}
+@font-face {font-family: "Satoshi-Regular-Italic";
+    src: url(fonts/Satoshi-Italic.otf);}
+@font-face {font-family: "Satoshi-Medium";
+    src: url(fonts/Satoshi-Medium.otf);}
+@font-face {font-family: "Satoshi-Medium-Italic";
+    src: url(fonts/Satoshi-MediumItalic.otf);}
+@font-face {font-family: "Satoshi-Bold";
+    src: url(fonts/Satoshi-Bold.otf);}
+@font-face {font-family: "Satoshi-Bold-Italic";
+    src: url(fonts/Satoshi-BoldItalic.otf);}
+@font-face {font-family: "Satoshi-Black";
+    src: url(fonts/Satoshi-Black.otf);}
+@font-face {font-family: "Satoshi-Black-Italic";
+    src: url(fonts/Satoshi-BlackItalic.otf);}
+
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    font-family: "Satoshi-Regular";
+    background: rgb(69, 75, 146);
+    height: 50px;
+    width: 100%;
+    z-index: 3;
+}
+.logo {
+    height: 3.5vh;
+    width: auto; /*keeps proportion*/
+    margin-top: 10px;
+    margin-left: 40px;
+}
+    nav ul{
+        float: right;
+        padding-left: 20x;
+    }
+    nav ul li{
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 20px;
+    }
+        nav ul li a{
+            color:  rgb(255, 255, 255);
+            font-size: 17px;
+            padding: 4px 8px;
+            border-radius: 15px;
+        }
+        nav a.active, nav a:hover{
+            border-color: rgb(175, 202, 11);
+            color: rgb(175, 202, 11);
+            border-style: solid;
+            border-width: 1px;
+            transition: .2s;
+        }
+.checkbtn {
+    font-size: 25px;
+    color: rgb(175, 202, 11);
+    float: right;
+    line-height: 50px;
+    margin: 0 25px;
+    display: none;
+}
+    #check {
+        display: none;
+    }
+
+
+/* HERO SECTION */
+.hero-container img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+    .hero-text {
+        position: absolute;
+        top: 13%;
+        left: 4%;
+        right: 4%;
+        font-family: "Satoshi-Regular-Italic"; 
+    }
+        .highlight-hero {
+            font-family: "Satoshi-bold-Italic"; 
+        }
+        .hero-text a {
+            text-decoration: none;
+            font-size: 75px;
+            line-height: 4vw;
+            color: rgb(69, 75, 146);
+        }
+        .hero-text a:hover {
+            color:rgb(175, 202, 11);
+        }
+        .hero-descricao {
+            font-size: 19px;
+            line-height: 2.5vh;
+            color: rgb(69, 75, 146);
+            padding-top: 2vh;
+            padding-left: 0vw;
+            padding-right: 65vw;
+        }
+.hero-button {
+    background-color: rgb(175, 202, 11);
+    color: rgb(69, 75, 146);
+    font-size: 20px;
+    font-family: "Satoshi-Regular";
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+    .hero-button:hover {
+        background-color: rgb(69, 75, 146);
+        color: white;
+    }
+    .hero-button:active {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+    }
+
+    
+/* ABOUT EVENTPRO SECTION*/
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 4vh; /*space between image and text*/
+    align-items: center; /*vertical centering*/
+    padding-bottom: 5vh;
+}
+    .logo-vertical{
+        height: 12vh;
+        width: auto; /*keeps proportion*/
+    }
+    .about-text {
+        padding: 15vh 15vh;
+        padding-left: 20vw;
+        padding-right: 20vw;
+        font-family: "Satoshi-Regular-Italic";
+        color:rgb(255, 255, 255);
+    }
+    .about-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+    }
+    .about-description {
+        font-family: "Satoshi-Regular";
+        font-size: 20px;
+    }
+        .about-description br {
+            display: block;
+            margin-top: 20px;
+        }
+
+
+/* WHY EVENTPRO SECTION */
+.whyeventpro {
+    display: flex;
+    align-items: center; /*aligns content vertically*/
+    margin: auto;
+}
+.highlight-whyeventpro {
+    font-family: "Satoshi-Black-Italic";
+    color:rgb(175, 202, 11);
+}
+    .whyeventpro-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1; /*takes available space*/
+        margin: 0vh 0vh ;
+        margin-left: 5vw;
+        margin-right: 2vw;
+        color: white;
+        max-height: 100%; /*doesn't go beyond image height*/
+        overflow: hidden;
+        font-family: "Satoshi-Bold-Italic";
+        font-size: 25px;
+        line-height: 4vh;
+    }
+    .whyeventpro-description {
+        margin-top: 2vh;
+        font-family: "Satoshi-Regular";
+        font-size: 20px;
+        line-height: 3vh;
+    }
+    .whyeventpro-list {
+        margin: 2vh 2vh;
+        text-indent: 2vw;
+    }
+        .whyeventpro-list p {
+            text-indent: 3.5vw;
+        }
+        .whyeventpro-list li::before {
+            content: attr(data-text); 
+            position: relative;
+            color: rgb(175, 202, 11);
+            font-family: "Satoshi-Bold-Italic";
+        }
+    .whyeventpro-image {
+        flex: 1;
+        display: flex;
+    }
+        .whyeventpro-image img {
+            max-width: 100%;
+            height: auto; /*keeps aspect ratio */
+            object-fit: cover; /*clean fill*/
+        }
+
+
+/* EVENTPRO BUNDLE SECTION */
+.getstarted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+}
+    .getstarted-button {
+        border-color: rgb(175, 202, 11);
+        border-style: solid;
+        border-width: 2px;
+        padding: 2vh 2vw;
+        border-radius: 15px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        font-size: 20px;
+        line-height: 1.7vw;
+        transition: background-color .2s, color .2s;
+    }
+        .getstarted-button .highlight-button {
+            font-family: "Satoshi-Bold-Italic";
+        }
+        .getstarted-button:hover {
+            background-color: rgb(175, 202, 11);
+            color: rgb(69, 75, 146);
+        }
+        .getstarted-button:active {
+            background-color: rgb(69, 75, 146);
+            color: white;
+            opacity: 0.7;
+        }
+    .getstarted-description{
+        margin-left: 20vw;
+        margin-right: 20vw;
+        margin-top: 2vw;
+        margin-bottom: 5vw;
+        color:rgb(255, 255, 255);
+        font-family: "Satoshi-Regular";
+        font-size: 20px;
+    }
+
+
+/* What's Inside Section */
+.whatsinside-title {
+    display: flex;
+    justify-content: center;  /*center horizontally */
+    align-items: center;  /*center vertically */
+    font-family: "Satoshi-Regular";
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    margin-bottom: 3vh;
+}
+    .highlight-inside {
+        font-family: "Satoshi-Bold-Italic";
+    }
+
+.whatsinside-container {
+    width: 100%;
+    font-family: "Satoshi-Regular";
+    margin-bottom: 3.5vw;
+}
+    .whatsinside_box {
+        display: flex;
+        align-items: flex-start;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+        .whatsinside_item {
+            -ms-flex-preferred-size: calc(33.33333% - 30px);
+            flex-basis: calc(33.33333% - 30px);
+            margin: 0 15px 30px;
+            overflow: hidden;
+            border-style: solid;
+            border-radius: 30px;
+            border-width: 2px;
+            border-color:  rgb(175, 202, 11);
+        }
+            .whatsinside-item_link {
+                display: block;
+                padding: 30px 30px;
+                position: relative;
+            }
+                .whatsinside-item_link:hover,
+                .whatsinside-item_link:hover .whatsinside-item_title,
+                .whatsinside-item_link:hover .whatsinside-item_description {
+                    text-decoration: none;
+                    color: rgb(69, 75, 146);
+                }
+                .whatsinside-item_link:hover .whatsinside-item_bg {
+                    -webkit-transform: scale(10);
+                    -ms-transform: scale(10);
+                    transform: scale(10);
+                }
+            .whatsinside-item_title {
+                min-height: 87px;
+                margin: 0 0 25px;
+                overflow: hidden;
+                font-family: "Satoshi-Bold-Italic";
+                font-size: 25px;
+                color: #ffffff;
+            
+                -webkit-transition: color .5s ease;
+                -o-transition: color .5s ease;
+                transition: color .5s ease;
+            }
+            .whatsinside-item_description {
+                padding-top: 10px;
+                font-size: 14px;
+                color:  #ffffff;
+            
+                -webkit-transition: color .5s ease;
+                -o-transition: color .5s ease;
+                transition: color .5s ease;
+            }
+            .whatsinside-item_bg {
+                height: 105px;
+                width: 105px;
+                background-color: rgb(175, 202, 11);
+            
+                z-index: -1;
+                position: absolute;
+                top: -75px;
+                right: -75px;
+            
+                border-radius: 30%;
+            
+                -webkit-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                transition: all .5s ease;
+            }
+
+/* CTA Final */
+.cta-title {
+    display: flex;
+    justify-content: center;  /*center horizontally*/
+    align-items: center;  /*center vertically*/
+    font-family: "Satoshi-Regular";
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    margin-top: 1.5vh;
+}
+    .highlight-cta {
+        font-family: "Satoshi-Bold-Italic";
+    }
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5vw;
+    margin-bottom: 5vw;
+}
+    .cta-button {
+        padding: 2vh 2vw;
+        border-color: rgb(175, 202, 11);
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 15px;
+        cursor: pointer;
+        background-color: rgb(175, 202, 11);
+        color: rgb(69, 75, 146);
+        font-size: 20px;
+        transition: background-color .2s, color .2s;
+    }
+        .cta-button:hover {
+            background-color: rgb(69, 75, 146);
+            color: white;
+        }
+        .cta-button:active {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+        }
+
+
+/* FOOTER */
+.footer {
+    background-color: rgb(69, 75, 146);
+    color: white;
+    padding: 8vh 6vh 12vh;
+    font-family: "Satoshi-Regular";
+    font-size: 1.7vh;; 
+}
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap; /*columns break to next line*/
+        justify-content: space-between;
+    }
+        .logo-footer {
+            height: 4vh;
+            width: auto; /*keeps proportion*/
+        }
+        .highlight-footer {
+            font-family: "Satoshi-Regular-Italic";
+            font-size: 2.4vh;
+            margin-bottom: 3vh;
+        }
+        .footer-legenda p{
+            margin-bottom: 2vh;
+        }
+            .footer-left {
+                flex: 2;
+                max-width: 20vw;
+            }
+            .footer-middle {
+                max-width: 20vw;
+            }
+            .footer-right {
+                flex: 1;
+                max-width: 20vw;
+                min-width: 10vw; /*avoids getting too small*/
+            }
+                .footer-middle h3,
+                .footer-right h3 {
+                    font-size: 2vh;
+                    margin-top: 11vh;
+                    margin-bottom: 1.5vh;
+                }
+                .footer-middle ul,
+                .footer-right ul {
+                    list-style: none;
+                    line-height: 2.3vh;
+                }
+
+
+
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    /* NAVBAR */
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: rgb(69, 75, 146);
+        top: 50px;
+        right: -100%;
+        text-align: center;
+        transition: 0.3s;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+        nav ul li {
+            display: block;
+            margin: 20px 0;
+            line-height: 30px;
+        }
+            nav ul li a {
+                font-size: 16px;
+            }
+    .logo {
+        margin-left: 25px;
+    }
+    .checkbtn {
+        display: block;
+        margin-right: 25px;
+    }
+        #check:checked ~ ul {
+            right: 0;
+        }
+
+
+    /*HERO SECTION*/
+    .hero-text {
+        top: 12%;
+        left: 5%;
+        right: 5%;
+    }
+        .hero-text a {
+            font-size: 45px;
+            line-height: 3.5vw;
+        }
+    .hero-descricao {
+        font-size: 14px;
+        line-height: 2.5vh;
+        padding-right: 30vw;
+    }
+
+
+    /*ABOUT SECTION*/
+    .about-container {
+        flex-direction: column;
+        gap: 2vh;
+        padding-bottom: 1vh;
+    }
+        .logo-vertical {
+            height: 10vh;
+        }
+        .about-text {
+            padding: 10vh 5vw;
+        }
+        .about-title {
+            font-size: 25px;
+            margin-bottom: 2vh;
+        }
+        .about-description {
+            font-size: 18px;
+            margin-top: 2vh;
+        }
+    
+    /*WHY EVENTPRO SECTION*/
+    .whyeventpro {
+        flex-direction: column;
+        align-items: center;
+    }
+        .whyeventpro-text {  
+            margin: 0vw 2vw;
+            font-size: 18px;
+            line-height: 3.2vh;
+            padding: 1vw 3vw;
+        }
+        .whyeventpro-description {
+            margin-top: 2vh;
+            font-size: 18px;
+            line-height: 2.5vh;
+        }
+        .whyeventpro-list {
+            margin: 3vh 0;
+        }
+            .whyeventpro-list p {
+                text-indent: 0;
+                margin-bottom: 3vw;
+            }
+            .whyeventpro-list li::before {
+                display: block;
+                text-indent: 0;
+            }
+        .whyeventpro-image {
+            width: 100%;
+        }
+
+    /*EVENTPRO BUNDLE SECTION*/
+    .getstarted {
+        margin-top: 4vh;
+    }
+        .getstarted-button {
+            padding: 2vh 6vw;
+            font-size: 18px;
+            line-height: 3.5vh;
+        }
+        .getstarted-description {
+            margin: 4vw 5vw 8vw;
+            font-size: 16px;
+        }
+
+    /*WHATS INSIDE SECTION*/
+    .whatsinside-title {
+        font-size: 24px;
+        margin-top: 10vh;
+        margin-bottom: 3vh;
+    }
+    .whatsinside_box {
+        flex-direction: column;
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }   
+    .whatsinside_item {
+        flex-basis: 100%;
+        margin: 0 0 15px;
+        padding: 8px;
+    } 
+        .whatsinside-item_link {
+            padding: 20px;
+        } 
+        .whatsinside-item_title {
+            min-height: auto;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }    
+        .whatsinside-item_description {
+            font-size: 13px;
+        }
+        .whatsinside-item_bg {
+            height: 81px;
+            width: 81px;
+            top: -60px;
+            right: -60px;
+        }
+
+    /*CTA FINAL*/
+    .cta-title {
+        font-size: 16px;
+        margin-top: .5vh;
+    }
+    .cta {
+        margin-top: 3vh;
+        margin-bottom: 8vh;
+    }
+        .cta-button {
+            padding: 2vh 3vh;
+        }
+         
+    /*FOOTER*/
+    .footer-container {
+        flex-direction: column; /* Empilha as colunas verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        max-width: 100%; /* Cada seção ocupa toda a largura */
+    }
+    .footer-left {
+        margin-bottom: 20px; /* Espaçamento entre as seções */
+    }
+    .footer-middle h3,
+    .footer-right h3 {
+        margin-top: 2.5vh;
+        margin-bottom: .7vh;
+    }
+}
